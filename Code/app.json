@@ -1,0 +1,12 @@
+{
+  "name": "TrackCovid",
+  "displayName": "TrackCovid",
+  "expo": {
+    "name": "TrackCovid",
+    "slug": "TrackCovid",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
