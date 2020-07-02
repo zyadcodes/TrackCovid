@@ -1,58 +1,40 @@
 // This file is going to contain all of the fontStyles that are going to be used in the app
-import colors from '../colors';
+import colors from './colors';
 import { StyleSheet, Platform, PixelRatio } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 // Gets the correct font based on either iOS or Android
-const font = 'Lucida Grande';
-
-// Sets the font size
-let baseFontSize = Platform.OS === 'android' ? 20 : 18;
-const pixelRatio = PixelRatio.get();
-if (pixelRatio < 3) {
-	baseFontSize = Platform.OS === 'android' ? 16 : 14.4;
-}
-
-const bigFontSize = baseFontSize * 1.2;
-const smallTextFontSize = baseFontSize * 0.6;
-const subTextFontSize = baseFontSize * 0.9;
-const subTitleFontSize = baseFontSize * 2.2;
-const bigTitleFontSize = baseFontSize * 4.4;
+const font = 'Arial';
 
 export default StyleSheet.create({
+	// The style for all big title text style
+	bigTitleTextStyle: {
+		fontFamily: font,
+		fontSize: RFPercentage(7.5)
+	},
+
 	// The style for all big text style
 	bigTextStyle: {
 		fontFamily: font,
-		fontSize: bigFontSize,
+		fontSize: RFPercentage(3),
 	},
 
 	// The style for all small text style
 	smallTextStyle: {
 		fontFamily: font,
-		fontSize: smallTextFontSize,
+		fontSize: RFPercentage(1.5),
 	},
 
 	// The style for all sub text style
 	subTextStyle: {
 		fontFamily: font,
-		fontSize: subTextFontSize,
+		fontSize: RFPercentage(2),
 	},
 
 	// The style for all the main text style
 	mainTextStyle: {
 		fontFamily: font,
-		fontSize: baseFontSize,
-	},
-
-	// The style for all the big subtitle text style
-	bigSubTitleStyle: {
-		fontFamily: font,
-		fontSize: subTitleFontSize,
-	},
-
-	// The style for all the big title text style
-	bigTitleStyle: {
-		fontFamily: font,
-		fontSize: bigTitleFontSize,
+		fontSize: RFPercentage(2.5),
 	},
 
 	/* The colors for all the different fonts*/
@@ -60,28 +42,8 @@ export default StyleSheet.create({
 		color: colors.lightGray,
 	},
 
-	white: {
-		color: colors.white,
-	},
-
-	lightBlue: {
-		color: colors.lightBlue,
-	},
-
-	darkBlue: {
-		color: colors.darkBlue,
-	},
-
-	blue: {
-		color: colors.blue,
-	},
-
 	black: {
 		color: colors.black,
-	},
-
-	red: {
-		color: colors.red,
 	},
 
 	gray: {
@@ -90,6 +52,18 @@ export default StyleSheet.create({
 
 	green: {
 		color: colors.green,
+	},
+
+	lightPurple:{
+		color: colors.lightPurple
+	},
+
+	purple: {
+		color: colors.purple
+	},
+
+	darkPurple: {
+		color: colors.darkPurple
 	},
 
 	/* The different font stylings */

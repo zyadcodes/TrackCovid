@@ -3,7 +3,7 @@
 import fetch from 'node-fetch';
 
 // Declares and exports the class
-export default class Country {
+export default class County {
 	// The fields associated with this class
 	countryString = '';
 	countryISOCode = '';
@@ -61,13 +61,13 @@ export default class Country {
 			//       "long": 12.8333,
 			//       "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/it.png"
 			//     },
-			//     "cases": 168941,
-			//     "todayCases": 3786,
-			//     "deaths": 22170,
-			//     "todayDeaths": 525,
-			//     "recovered": 40164,
-			//     "active": 106607,
-			//     "critical": 2936,
+			//     //"cases": 168941,
+			//     //"todayCases": 3786,
+			//     //"deaths": 22170,
+			//     //"todayDeaths": 525,
+			//     //"recovered": 40164,
+			//     //"active": 106607,
+			//     //"critical": 2936,
 			//     "casesPerOneMillion": 2794,
 			//     "deathsPerOneMillion": 367,
 			//     "tests": 1178403,

@@ -85,10 +85,8 @@ export default class Country {
 
 		// This is an example of this function's return
 		// {
-		//     "country": "Spain",
-		//     "provinces": [
-		//       "mainland"
-		//     ],
+		//     "province": null,
+    	//	   "county": "KING",
 		//     "timeline": {
 		//       "cases": {
 		//         "3/21/20": 25374,
