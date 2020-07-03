@@ -36,16 +36,16 @@ export default StyleSheet.create({
         marginTop: screenHeight * 0.065,
 	},
 	iconMarginBottom: {
-		marginBottom: screenHeight * 0.065,
+		marginBottom: screenHeight * 0.025,
 	},
     titleContainer: {
-        marginTop: screenHeight * 0.025,
+        marginTop: screenHeight * 0.0125,
         marginLeft: screenWidth * 0.05,
         height: screenHeight * 0.115,
         justifyContent: 'space-between'
 	},
 	statCardContainer: {
 		marginLeft: screenWidth * (0.1 / 3),
-		marginVertical: screenHeight * 0.0125
+		marginVertical: screenHeight * 0.025
 	}
 });
