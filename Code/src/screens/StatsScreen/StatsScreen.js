@@ -179,6 +179,8 @@ const StatsScreen = (props) => {
 		<View style={StatsScreenStyle.screenBackground}>
 			<FlatList
 				data={data}
+				showsHorizontalScrollIndicator={false}
+				showsVerticalScrollIndicator={false}
 				ListHeaderComponent={
 					<View>
 						<TouchableOpacity style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginTop]}>

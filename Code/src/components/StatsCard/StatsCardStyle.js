@@ -12,7 +12,7 @@ export default StyleSheet.create({
 		backgroundColor: colors.purple,
 		flexDirection: 'column',
 		justifyContent: 'space-evenly',
-		shadowColor: colors.purple,
+		shadowColor: colors.black,
 		shadowOffset: {
 			width: 0,
 			height: 3,
