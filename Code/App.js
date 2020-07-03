@@ -1,21 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
+// This is going to be the screen that is automatically navigated to by React Native. It will navigate to the rest
+// of the screens
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import StatsScreen from './src/screens/StatsScreen/StatsScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+// Creates the functional component
+const App = (props) => {
+	// Renders the App
+	return <StatsScreen />;
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// Exports the module
+export default App;
