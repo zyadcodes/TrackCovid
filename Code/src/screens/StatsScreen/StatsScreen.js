@@ -181,7 +181,7 @@ const StatsScreen = (props) => {
 				data={data}
 				ListHeaderComponent={
 					<View>
-						<TouchableOpacity style={StatsScreenStyle.serachIcon}>
+						<TouchableOpacity style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginTop]}>
 							<Icon name='search' type='font-awesome' color={colors.lightPurple} />
 						</TouchableOpacity>
 						<View style={StatsScreenStyle.titleContainer}>
@@ -203,6 +203,13 @@ const StatsScreen = (props) => {
 						/>
 					</View>
 				)}
+				ListFooterComponent={
+					<View>
+						<TouchableOpacity style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginBottom]}>
+							<Icon name='gears' type='font-awesome' color={colors.lightPurple} />
+						</TouchableOpacity>
+					</View>
+				}
 			/>
 		</View>
 	);

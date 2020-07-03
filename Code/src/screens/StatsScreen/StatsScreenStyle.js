@@ -9,12 +9,13 @@ export default StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
+		backgroundColor: colors.lightPurple,
 	},
 	screenBackground: {
 		flex: 1,
 		backgroundColor: colors.darkPurple,
 	},
-	serachIcon: {
+	iconContainer: {
 		width: screenHeight * 0.07,
 		height: screenHeight * 0.07,
 		borderRadius: screenHeight * 0.035,
@@ -29,9 +30,14 @@ export default StyleSheet.create({
 		shadowOpacity: 0.25,
         shadowRadius: 2,
         alignSelf: 'flex-end',
-        marginTop: screenHeight * 0.065,
         marginRight: screenWidth * 0.075
-    },
+	},
+	iconMarginTop: {
+        marginTop: screenHeight * 0.065,
+	},
+	iconMarginBottom: {
+		marginBottom: screenHeight * 0.065,
+	},
     titleContainer: {
         marginTop: screenHeight * 0.025,
         marginLeft: screenWidth * 0.05,
@@ -40,6 +46,6 @@ export default StyleSheet.create({
 	},
 	statCardContainer: {
 		marginLeft: screenWidth * (0.1 / 3),
-		marginTop: screenHeight * 0.025
+		marginVertical: screenHeight * 0.0125
 	}
 });
