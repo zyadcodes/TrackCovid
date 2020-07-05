@@ -10,7 +10,7 @@ export default StyleSheet.create({
 	// The style for all big title text style
 	bigTitleTextStyle: {
 		fontFamily: font,
-		fontSize: RFPercentage(7.5)
+		fontSize: RFPercentage(7)
 	},
 
 	// The style for all big text style

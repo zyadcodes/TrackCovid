@@ -9,20 +9,18 @@ import colors from '../../config/colors';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import strings from '../../config/strings';
 import World from '../../classes/World';
+import Country from '../../classes/Country';
 import { Icon } from 'react-native-elements';
 import { getUpdatedMessage, getConstructedData } from './FunctionHelpers';
 
 // Creates the functional component
-const StatsScreen = (props) => {
+const StatsScreen = ({ route, navigation }) => {
 	// The state fields for this screen
 	const [isLoading, setIsLoading] = useState(true);
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [data, setData] = useState({});
 	const [pageTitle, setPageTitle] = useState('');
 	const [lastUpdated, setLastUpdated] = useState('');
-
-	// The props that would be passed into the screen to determine which location to show data for
-	const { location } = props;
 
 	// The useEffect method. This will check which data to fetch. It will fetch global data as a default unless
 	// a specific location is selected
@@ -33,7 +31,19 @@ const StatsScreen = (props) => {
 	// This is a helper function for useEffect because useEffect cannot be asyncrhronous
 	const fetchFunc = async () => {
 		// If a location is set, shows data for it. If none is set, shows global data
-		if (location) {
+		if (route.params) {
+			const { country } = route.params;
+			const countryObject = new Country(country.name, country.code);
+			await countryObject.initializeBasicData();
+			const countryData = countryObject.getBasicData();
+			const updatedMessage = getUpdatedMessage(countryData.updated);
+			const constructedData = getConstructedData(countryData);
+
+			setLastUpdated(updatedMessage);
+			setData(constructedData);
+			setPageTitle(country.name);
+			setIsLoading(false);
+			setIsRefreshing(false);
 		} else {
 			const global = new World();
 			await global.initializeBasicData();
@@ -71,13 +81,23 @@ const StatsScreen = (props) => {
 				ListHeaderComponent={
 					<View>
 						<TouchableOpacity
-							style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginTop]}>
+							style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginTop]}
+							onPress={() => {
+								navigation.push('SearchScreen');
+							}}>
 							<Icon name='search' type='font-awesome' color={colors.lightPurple} />
 						</TouchableOpacity>
 						<View style={StatsScreenStyle.titleContainer}>
-							<Text style={[fontStyles.bigTitleTextStyle, fontStyles.lightPurple, fontStyles.bold]}>
+							<Text
+								style={[
+									fontStyles.bigTitleTextStyle,
+									fontStyles.lightPurple,
+									fontStyles.bold,
+								]}>
 								{pageTitle}
 							</Text>
+						</View>
+						<View style={StatsScreenStyle.updatedContainer}>
 							<Text style={[fontStyles.subTextStyle, fontStyles.lightPurple]}>{lastUpdated}</Text>
 						</View>
 					</View>

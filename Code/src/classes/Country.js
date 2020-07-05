@@ -6,8 +6,8 @@ import fetch from 'node-fetch';
 export default class County {
 	// The fields associated with this class
 	countryString = '';
-	countryISOCode = '';
 	countryBasicData = '';
+	countryISOCode = '';
 
 	// Constructor initialzes the information about this country
 	constructor(countryString, countryISOCode) {
@@ -29,6 +29,27 @@ export default class County {
 			},
 		});
 		const json = await response.json();
+
+		// If there is no basic data available for the country, sets the the data to unknown
+		if (json.message === "Country not found or doesn't have any cases") {
+			this.countryBasicData = {
+				updated: new Date().getTime(),
+				country: this.countryString,
+				cases: "Unknown",
+				todayCases: "Unknown",
+				deaths: "Unknown",
+				todayDeaths: "Unknown",
+				recovered: "Unknown",
+				active: "Unknown",
+				critical: "Unknown",
+				casesPerOneMillion: "Unknown",
+				deathsPerOneMillion: "Unknown",
+				tests: "Unknown",
+				testsPerOneMillion: "Unknown",
+			};
+			return 0;
+		}
+
 		this.countryBasicData = json;
 		return 0;
 	};
@@ -38,10 +59,7 @@ export default class County {
 		return this.countryString;
 	};
 
-	// Returns the country's ISO code. e.g. USA.
-	getCountryISOCode = () => {
-		return this.countryISOCode;
-	};
+	// Return the country's ISO Code. e.g. USA
 
 	// Method retrieves the basic data for this country
 	getBasicData = () => {

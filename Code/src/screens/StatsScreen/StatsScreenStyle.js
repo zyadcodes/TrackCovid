@@ -39,10 +39,14 @@ export default StyleSheet.create({
 		marginBottom: screenHeight * 0.025,
 	},
     titleContainer: {
-        marginTop: screenHeight * 0.0125,
-        marginLeft: screenWidth * 0.05,
-        height: screenHeight * 0.115,
+		marginTop: screenHeight * 0.0125,
+		marginBottom: screenHeight * 0.0125,
+        marginHorizontal: screenWidth * 0.05,
+		flexDirection: 'row',
         justifyContent: 'space-between'
+	},
+	updatedContainer: {
+		marginLeft: screenWidth * 0.05,
 	},
 	statCardContainer: {
 		marginLeft: screenWidth * (0.1 / 3),
