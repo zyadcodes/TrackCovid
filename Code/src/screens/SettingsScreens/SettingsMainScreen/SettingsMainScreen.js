@@ -5,12 +5,13 @@ import SettingsButton from '../../../components/SettingsButton/SettingsButton'
 import {Icon} from 'react-native-elements'
 import { fontScale } from '../../../config/dimensions'
 import colors from '../../../config/colors'
+import BackButton from '../../../components/BackButton/BackButton'
 
 const SettingsMainScreen = (props) => {
-    const [titles, setTitles] = useState([
-        'Privacy Policy',
-        'Terms of Service',
-        'About Us'
+    const [screens] = useState([
+        {title: 'Privacy Policy', screen: 'PrivacyPolicyScreen'},
+        {title: 'Terms and Conditions', screen: 'TermsOfServiceScreen'},
+        {title: 'About Us', screen: 'AboutUsScreen'},
     ])
 
     return (
@@ -20,18 +21,12 @@ const SettingsMainScreen = (props) => {
             </Text>
             <FlatList
                 listKey="SettingsButtons"
-                data={titles}
+                data={screens}
                 renderItem={({item, index, separators}) => 
-                    <SettingsButton key={index} title={item}/>
+                    <SettingsButton onPress={() => {props.navigation.navigate(item.screen)}} key={index} title={item.title}/>
                 }
             />
-            <TouchableOpacity style={styles.backBtn} onPress={() => props.navigation.goBack(null)}>
-                <Icon 
-                    type="font-awesome" 
-                    name="arrow-left" 
-                    size={fontScale*28} color={colors.white}
-                />                        
-            </TouchableOpacity>
+            <BackButton navigation={props.navigation}/>
         </View>
     )
 }

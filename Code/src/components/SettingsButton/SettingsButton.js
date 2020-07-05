@@ -7,7 +7,7 @@ import colors from '../../config/colors'
 
 const SettingsButton = (props) => {
     return (
-        <TouchableOpacity style={styles.touchable}>
+        <TouchableOpacity style={styles.touchable} onPress={() => props.onPress()}>
             <Text style={styles.titleText}>
                 {props.title}
             </Text>

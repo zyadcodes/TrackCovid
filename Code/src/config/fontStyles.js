@@ -13,6 +13,11 @@ export default StyleSheet.create({
 		fontSize: RFPercentage(7.5)
 	},
 
+	longTitleTextStyle: {
+		fontFamily: font,
+		fontSize: RFPercentage(5)
+	},
+
 	// The style for all big text style
 	bigTextStyle: {
 		fontFamily: font,
