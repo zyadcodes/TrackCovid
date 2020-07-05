@@ -96,6 +96,7 @@ const StatsScreen = (props) => {
 				ListFooterComponent={
 					<View>
 						<TouchableOpacity
+							onPress={() => props.navigation.navigate('SettingsScreen')}
 							style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginBottom]}>
 							<Icon name='gears' type='font-awesome' color={colors.lightPurple} />
 						</TouchableOpacity>
