@@ -2,11 +2,12 @@ import React from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import BackButton from '../../../components/BackButton/BackButton'
 import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
+import strings from '../../../config/strings'
 
 const PrivacyPolicyScreen = (props) => {
     return (
         <AppInfoScreen
-            title="Privacy Policy"
+            title={strings.PrivacyPolicy}
             navigation={props.navigation}
             information='PRIVACY NOTICE
             Last updated July 05, 2020

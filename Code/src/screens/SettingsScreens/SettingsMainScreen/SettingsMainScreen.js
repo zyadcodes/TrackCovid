@@ -6,12 +6,13 @@ import {Icon} from 'react-native-elements'
 import { fontScale } from '../../../config/dimensions'
 import colors from '../../../config/colors'
 import BackButton from '../../../components/BackButton/BackButton'
+import strings from '../../../config/strings'
 
 const SettingsMainScreen = (props) => {
     const [screens] = useState([
-        {title: 'Privacy Policy', screen: 'PrivacyPolicyScreen'},
-        {title: 'Terms and Conditions', screen: 'TermsOfServiceScreen'},
-        {title: 'About Us', screen: 'AboutUsScreen'},
+        {title: strings.PrivacyPolicy, screen: 'PrivacyPolicyScreen'},
+        {title: strings.TermsOfService, screen: 'TermsOfServiceScreen'},
+        {title: strings.AboutUs, screen: 'AboutUsScreen'},
     ])
 
     return (

@@ -13,7 +13,7 @@ const SettingsButton = (props) => {
             </Text>
             <Icon 
                 type="ionicon" 
-                style={{marginRight: 10}} 
+                style={{marginRight: screenWidth * 0.05}} 
                 name="ios-arrow-forward" 
                 size={fontScale*24} color={colors.white}
             />

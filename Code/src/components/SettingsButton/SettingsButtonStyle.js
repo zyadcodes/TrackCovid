@@ -4,7 +4,7 @@ import { fontScale, screenHeight, screenWidth } from '../../config/dimensions'
 
 export default styles = StyleSheet.create({
     touchable: {
-        marginBottom: 10,
+        marginBottom: screenHeight * 0.03,
         height: screenHeight * 0.05,
 		width: screenWidth * 0.98,
         borderRadius: 15,
@@ -23,7 +23,7 @@ export default styles = StyleSheet.create({
     },
     titleText: {
         color: colors.white,
-        marginLeft: 10,
+        marginLeft: screenWidth * 0.05,
         fontSize: fontScale*18
     }
 })

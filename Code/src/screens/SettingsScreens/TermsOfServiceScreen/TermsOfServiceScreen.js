@@ -2,15 +2,16 @@ import React from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import BackButton from '../../../components/BackButton/BackButton'
 import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
+import strings from '../../../config/strings'
 
 const TermsOfServiceScreen = (props) => {
     return (
         <AppInfoScreen
             navigation={props.navigation}
-            title="Terms and Conditions"
+            title={strings.TermsOfService}
             information='END USER LICENSE AGREEMENT
 
-            Last updated 7/5/202
+            Last updated 7/5/2020
             
             
             
