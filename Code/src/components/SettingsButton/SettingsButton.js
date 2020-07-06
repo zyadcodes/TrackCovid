@@ -1,0 +1,23 @@
+import React from 'react'
+import { TouchableOpacity, Text } from 'react-native'
+import styles from './SettingsButtonStyle'
+import { Icon } from 'react-native-elements'
+import { fontScale } from '../../config/dimensions'
+import colors from '../../config/colors'
+
+const SettingsButton = (props) => {
+    return (
+        <TouchableOpacity style={styles.touchable} onPress={() => props.onPress()}>
+            <Text style={styles.titleText}>
+                {props.title}
+            </Text>
+            <Icon 
+                type="ionicon" 
+                style={{marginRight: screenWidth * 0.05}} 
+                name="ios-arrow-forward" 
+                size={fontScale*24} color={colors.white}
+            />
+        </TouchableOpacity>
+    )
+}
+export default SettingsButton

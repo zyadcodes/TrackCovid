@@ -16,5 +16,7 @@ export default {
     TotalTested: 'Total Tested',
     TestsPer1M: 'Tests Per 1M',
     SearchForACountry: 'Search for a country...',
-
+    PrivacyPolicy: 'Privacy Policy',
+    TermsOfService: 'Terms and Conditions',
+    AboutUs: 'About Us',
 }
