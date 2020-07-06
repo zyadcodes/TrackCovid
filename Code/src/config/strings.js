@@ -14,6 +14,8 @@ export default {
     CasesPer1M: 'Cases Per 1M',
     DeathsPer1M: 'Deaths Per 1M',
     TotalTested: 'Total Tested',
-    TestsPer1M: 'Tests Per 1M'
-
+    TestsPer1M: 'Tests Per 1M',
+    PrivacyPolicy: 'Privacy Policy',
+    TermsOfService: 'Terms and Conditions',
+    AboutUs: 'About Us',
 }
