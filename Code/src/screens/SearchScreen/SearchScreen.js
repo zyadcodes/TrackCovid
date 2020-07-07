@@ -17,6 +17,8 @@ import colors from '../../config/colors';
 import fontStyles from '../../config/fontStyles';
 import strings from '../../config/strings';
 import CountryList from './CountryList';
+import analytics from '@react-native-firebase/analytics';
+import BackButton from '../../components/BackButton/BackButton';
 
 // Creates the functional component
 const SearchScreen = ({ route, navigation }) => {
@@ -72,11 +74,18 @@ const SearchScreen = ({ route, navigation }) => {
 					renderItem={({ item, index }) => (
 						<TouchableOpacity
 							style={SearchScreenStyle.rowSelectionStyle}
-							onPress={() => navigation.push('StatsScreen', { country: item })}>
+							onPress={() => {
+								// Logs to Firebase Analytics and then navigates to the correct screen
+								analytics().logEvent('search', {
+									searchedItem: item.name,
+								});
+								navigation.push('StatsScreen', { country: item });
+							}}>
 							<Text style={[fontStyles.bigTextStyle, fontStyles.lightPurple]}>{item.name}</Text>
 						</TouchableOpacity>
 					)}
 				/>
+				<BackButton navigation={navigation} />
 			</View>
 		</TouchableWithoutFeedback>
 	);

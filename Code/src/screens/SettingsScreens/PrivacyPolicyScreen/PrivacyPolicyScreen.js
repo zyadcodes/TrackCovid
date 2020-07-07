@@ -1,15 +1,22 @@
-import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import BackButton from '../../../components/BackButton/BackButton'
-import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
-import strings from '../../../config/strings'
+// This is going to contain the Privacy Policy for the app
+import React, { useEffect } from 'react';
+import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen';
+import strings from '../../../config/strings';
+import analytics from '@react-native-firebase/analytics';
 
-const PrivacyPolicyScreen = (props) => {
-    return (
-        <AppInfoScreen
-            title={strings.PrivacyPolicy}
-            navigation={props.navigation}
-            information='PRIVACY NOTICE
+// Declares the functional component
+const PrivacyPolicyScreen = ({ route, navigation }) => {
+	// The useEffect method sets the screen in Firebase Analytics
+	useEffect(() => {
+		analytics().setCurrentScreen('Privacy Policy Screen', 'PrivacyPolicyScreen');
+	}, []);
+
+	// Returns the UI of the screen
+	return (
+		<AppInfoScreen
+			title={strings.PrivacyPolicy}
+			navigation={navigation}
+			information='PRIVACY NOTICE
             Last updated July 05, 2020
 
             Thank you for choosing to be part of our community at TrackCovid (“Company”, “we”, “us”, or “our”). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at contacttrackcovid@gmail.com.
@@ -131,9 +138,9 @@ const PrivacyPolicyScreen = (props) => {
             Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please submit a request form by clicking here. We will respond to your request within 30 days.
             This privacy policy was created using Termly’s Privacy Policy Generator.
             '
-        />
-    )
-}
+		/>
+	);
+};
 
-export default PrivacyPolicyScreen
-
+// Exports the component
+export default PrivacyPolicyScreen;

@@ -63,64 +63,64 @@ const getConstructedData = (data) => {
 	// Structures the data in an appropriate way to be read by the UI
 	const constructedData = [
 		{
-			title: strings.ConfirmeCases,
+			title: strings.ConfirmedCases,
 			number: data.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#FE9E00',
 		},
 		{
 			title: strings.TotalDeaths,
 			number: data.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#F65164',
 		},
 		{
 			title: strings.ActiveCases,
 			number: data.active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#FE9E00',
 		},
 		{
 			title: strings.TotalRecovered,
 			number: data.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#8ACC26',
 		},
 		{
 			title: strings.MortalityRate,
 			number: ((data.deaths / data.cases) * 100).toFixed(0) + '%',
-			indicatorColor: colors.green,
+			indicatorColor: '#449AE2',
 		},
 		{
 			title: strings.TotalCritical,
 			number: data.critical.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#F65164',
 		},
 		{
 			title: strings.TodaysCases,
 			number: data.todayCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#FE9E00',
 		},
 		{
 			title: strings.TodaysDeaths,
 			number: data.todayDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#F65164',
 		},
 		{
 			title: strings.CasesPer1M,
 			number: data.casesPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#FE9E00',
 		},
 		{
 			title: strings.DeathsPer1M,
 			number: data.deathsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#F65164',
 		},
 		{
 			title: strings.TotalTested,
 			number: data.tests.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#8ACC26',
 		},
 		{
 			title: strings.TestsPer1M,
 			number: data.testsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-			indicatorColor: colors.green,
+			indicatorColor: '#8ACC26',
 		},
     ];
     

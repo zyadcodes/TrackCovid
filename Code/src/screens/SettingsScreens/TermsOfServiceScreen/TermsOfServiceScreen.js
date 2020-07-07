@@ -1,15 +1,22 @@
-import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import BackButton from '../../../components/BackButton/BackButton'
-import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
-import strings from '../../../config/strings'
+// This screen is going to contain the Terms of Service for this app
+import React, { useEffect } from 'react';
+import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen';
+import strings from '../../../config/strings';
+import analytics from '@react-native-firebase/analytics';
 
-const TermsOfServiceScreen = (props) => {
-    return (
-        <AppInfoScreen
-            navigation={props.navigation}
-            title={strings.TermsOfService}
-            information='END USER LICENSE AGREEMENT
+// Declares the functional component
+const TermsOfServiceScreen = ({ route, navigation }) => {
+	// The useEffect method sets the screen in Firebase Analytics
+	useEffect(() => {
+		analytics().setCurrentScreen('Terms of Service Screen', 'TermsOfServiceScreen');
+	}, []);
+
+	// Returns the UI
+	return (
+		<AppInfoScreen
+			navigation={navigation}
+			title={strings.TermsOfService}
+			information='END USER LICENSE AGREEMENT
 
             Last updated 7/5/2020
             
@@ -104,9 +111,9 @@ const TermsOfServiceScreen = (props) => {
             14.2  Collateral agreements, changes and amendments are only valid if laid down in writing. The preceding clause can only be waived in writing.
                
             These terms of use were created using Termly’s Terms and Conditions Generator.'
-        />
-    )
-}
+		/>
+	);
+};
 
-export default TermsOfServiceScreen
-
+// Exports the component
+export default TermsOfServiceScreen;

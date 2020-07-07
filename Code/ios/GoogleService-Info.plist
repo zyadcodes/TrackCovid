@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>132336651639-b76csnidamh1ock4d671bqv3pk72ielt.apps.googleusercontent.com</string>
+	<string>885520743262-tibvn0skau2h9kpum0hhhvj7k9ip8n19.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.132336651639-b76csnidamh1ock4d671bqv3pk72ielt</string>
+	<string>com.googleusercontent.apps.885520743262-tibvn0skau2h9kpum0hhhvj7k9ip8n19</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB6QLexwxb3J1yuAq7m6CK80ZKYiZq42iY</string>
+	<string>AIzaSyDijbaDSQEea3FS5-BKaa9QuHAG9SJqLhI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>132336651639</string>
+	<string>885520743262</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.trackcovid.trackcovid</string>
+	<string>com.YZApps.TrackCovid</string>
 	<key>PROJECT_ID</key>
-	<string>trackcovid-9effe</string>
+	<string>trackcovid-d8277</string>
 	<key>STORAGE_BUCKET</key>
-	<string>trackcovid-9effe.appspot.com</string>
+	<string>trackcovid-d8277.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:132336651639:ios:49cf85408e548a966c6572</string>
+	<string>1:885520743262:ios:d57f325d067215e52dedcf</string>
 	<key>DATABASE_URL</key>
-	<string>https://trackcovid-9effe.firebaseio.com</string>
+	<string>https://trackcovid-d8277.firebaseio.com</string>
 </dict>
 </plist>
