@@ -66,6 +66,7 @@ const StatsScreen = ({ route, navigation }) => {
 		} else {
 			// Sets the screen Analytics for Firebase
 			analytics().setCurrentScreen('Global Stats Screen', 'StatsScreen');
+			analytics().logEvent('Global View', {});
 			await crashlytics().setAttribute('searchedItem', 'Global');
 
 			// Uses a try-catch statement to log any possible crashes to Firebase Crashlytics. If there is an
