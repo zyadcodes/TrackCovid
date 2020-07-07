@@ -15,6 +15,7 @@ import { getUpdatedMessage, getConstructedData } from './FunctionHelpers';
 import analytics from '@react-native-firebase/analytics';
 import crashlytics from '@react-native-firebase/crashlytics';
 
+
 // Creates the functional component
 const StatsScreen = ({ route, navigation }) => {
 	// The state fields for this screen
@@ -26,13 +27,13 @@ const StatsScreen = ({ route, navigation }) => {
 	const [isGlobalView, setIsGlobalView] = useState(route.params ? false : true);
 
 	// The useEffect method. This will check which data to fetch. It will fetch global data as a default unless
-	// a specific location is selected
+	// a specific location is selected.
 	useEffect(() => {
 		setIsLoading(true);
 		fetchFunc();
 	}, [isGlobalView]);
 
-	// This is a helper function for useEffect because useEffect cannot be asyncrhronous
+	// This is a helper function for useEffect because useEffect cannot be asynchronous
 	const fetchFunc = async () => {
 
 		// If a location is set, shows data for it. If none is set, shows global data
