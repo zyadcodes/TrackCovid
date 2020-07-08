@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>885520743262-tibvn0skau2h9kpum0hhhvj7k9ip8n19.apps.googleusercontent.com</string>
+	<string>885520743262-69j5k7krith9vt0nj1ara3qfnqtd3al8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.885520743262-tibvn0skau2h9kpum0hhhvj7k9ip8n19</string>
+	<string>com.googleusercontent.apps.885520743262-69j5k7krith9vt0nj1ara3qfnqtd3al8</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDijbaDSQEea3FS5-BKaa9QuHAG9SJqLhI</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.YZApps.TrackCovid</string>
+	<string>com.yzapps.Track-Covid</string>
 	<key>PROJECT_ID</key>
 	<string>trackcovid-d8277</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:885520743262:ios:d57f325d067215e52dedcf</string>
+	<string>1:885520743262:ios:c410c6d03fa1f2802dedcf</string>
 	<key>DATABASE_URL</key>
 	<string>https://trackcovid-d8277.firebaseio.com</string>
 </dict>

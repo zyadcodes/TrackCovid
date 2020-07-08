@@ -13,7 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-TrackCovid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-TrackCovid.a */; };
-		9BACFE5F24B3E6C7003E289A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BACFE5E24B3E6C7003E289A /* GoogleService-Info.plist */; };
+		9BD4D64524B65A9400F00839 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4D64424B65A9400F00839 /* GoogleService-Info.plist */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-TrackCovid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrackCovid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-TrackCovid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackCovid.debug.xcconfig"; path = "Target Support Files/Pods-TrackCovid/Pods-TrackCovid.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-TrackCovid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackCovid.release.xcconfig"; path = "Target Support Files/Pods-TrackCovid/Pods-TrackCovid.release.xcconfig"; sourceTree = "<group>"; };
-		9BACFE5E24B3E6C7003E289A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9BD4D64424B65A9400F00839 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = TrackCovid/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -84,7 +84,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				9BACFE5E24B3E6C7003E289A /* GoogleService-Info.plist */,
+				9BD4D64424B65A9400F00839 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* TrackCovid */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -157,7 +157,7 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = PHH78H2W53;
+						DevelopmentTeam = 7234TKH9GH;
 						LastSwiftMigration = 1120;
 					};
 				};
@@ -187,7 +187,7 @@
 			files = (
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9BACFE5F24B3E6C7003E289A /* GoogleService-Info.plist in Resources */,
+				9BD4D64524B65A9400F00839 /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 			);
@@ -354,7 +354,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = TrackCovid/Base.lproj/LaunchScreen.xib;
-				DEVELOPMENT_TEAM = PHH78H2W53;
+				DEVELOPMENT_TEAM = 7234TKH9GH;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -363,12 +363,13 @@
 				INFOPLIST_FILE = TrackCovid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.YZApps.TrackCovid;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yzapps.Track-Covid";
 				PRODUCT_NAME = "Track Covid";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -384,16 +385,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = TrackCovid/Base.lproj/LaunchScreen.xib;
-				DEVELOPMENT_TEAM = PHH78H2W53;
+				DEVELOPMENT_TEAM = 7234TKH9GH;
 				INFOPLIST_FILE = TrackCovid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.YZApps.TrackCovid;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yzapps.Track-Covid";
 				PRODUCT_NAME = "Track Covid";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

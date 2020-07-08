@@ -1,18 +1,9 @@
 // This is going to be the screen where users will be able to search through a selection of cities, counties, or countries
 // and will be able to select one of them
 import React, { useState } from 'react';
-import {
-	View,
-	Keyboard,
-	TouchableWithoutFeedback,
-	TextInput,
-	FlatList,
-	Text,
-	TouchableOpacity,
-} from 'react-native';
+import { View, TextInput, FlatList, Text, TouchableOpacity } from 'react-native';
 import SearchScreenStyle from './SearchScreenStyle';
 import stringSimilarity from 'string-similarity';
-import { isIphoneX } from 'react-native-iphone-x-helper';
 import colors from '../../config/colors';
 import fontStyles from '../../config/fontStyles';
 import strings from '../../config/strings';
@@ -49,45 +40,43 @@ const SearchScreen = ({ route, navigation }) => {
 
 	// Returns the UI of the screen
 	return (
-		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-			<View style={SearchScreenStyle.screenContainer}>
-				<View style={SearchScreenStyle.iphoneXTopView} />
-				<View style={SearchScreenStyle.searchInputContainerStyle}>
-					<TextInput
-						value={input}
-						placeholder={strings.SearchForACountry}
-						placeholderTextColor={colors.lightPurple}
-						onChangeText={(newText) => {
-							setInput(newText);
-							// Only searches after two characters have been typed
-							if (newText.length > 1) {
-								search(newText);
-							}
-						}}
-						style={SearchScreenStyle.searchInputStyle}
-					/>
-				</View>
-				<FlatList
-					data={results}
-					extraData={results}
-					keyExtractor={(item, index) => item.code}
-					renderItem={({ item, index }) => (
-						<TouchableOpacity
-							style={SearchScreenStyle.rowSelectionStyle}
-							onPress={() => {
-								// Logs to Firebase Analytics and then navigates to the correct screen
-								analytics().logEvent('search', {
-									searchedItem: item.name,
-								});
-								navigation.push('StatsScreen', { country: item });
-							}}>
-							<Text style={[fontStyles.bigTextStyle, fontStyles.lightPurple]}>{item.name}</Text>
-						</TouchableOpacity>
-					)}
+		<View style={SearchScreenStyle.screenContainer}>
+			<View style={SearchScreenStyle.iphoneXTopView} />
+			<View style={SearchScreenStyle.searchInputContainerStyle}>
+				<TextInput
+					value={input}
+					placeholder={strings.SearchForACountry}
+					placeholderTextColor={colors.lightPurple}
+					onChangeText={(newText) => {
+						setInput(newText);
+						// Only searches after two characters have been typed
+						if (newText.length > 1) {
+							search(newText);
+						}
+					}}
+					style={SearchScreenStyle.searchInputStyle}
 				/>
-				<BackButton navigation={navigation} />
 			</View>
-		</TouchableWithoutFeedback>
+			<FlatList
+				data={results}
+				extraData={results}
+				keyExtractor={(item, index) => item.code}
+				renderItem={({ item, index }) => (
+					<TouchableOpacity
+						style={SearchScreenStyle.rowSelectionStyle}
+						onPress={() => {
+							// Logs to Firebase Analytics and then navigates to the correct screen
+							analytics().logEvent('search', {
+								searchedItem: item.name,
+							});
+							navigation.push('StatsScreen', { country: item });
+						}}>
+						<Text style={[fontStyles.bigTextStyle, fontStyles.lightPurple]}>{item.name}</Text>
+					</TouchableOpacity>
+				)}
+			/>
+			<BackButton navigation={navigation} />
+		</View>
 	);
 };
 
