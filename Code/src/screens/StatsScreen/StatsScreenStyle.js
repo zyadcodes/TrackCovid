@@ -52,7 +52,7 @@ export default StyleSheet.create({
 		marginBottom: screenHeight * 0.025,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		width: screenWidth * 0.85,
+		width: screenWidth * 0.9,
 		alignSelf: 'center'
 	},
 	iconMarginTop: {

@@ -30,7 +30,7 @@ const SettingsMainScreen = ({ route, navigation }) => {
 				renderItem={({ item, index }) => (
 					<SettingsButton
 						onPress={() => {
-							navigation.navigate(item.screen);
+							navigation.push(item.screen);
 						}}
 						title={item.title}
 					/>

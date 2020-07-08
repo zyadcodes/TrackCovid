@@ -23,4 +23,7 @@ export default styles = StyleSheet.create({
 		marginLeft: screenWidth * 0.05,
 		marginBottom: screenHeight * 0.02,
 	},
+	bottomSpacer: {
+		height: screenHeight * 0.025,
+	}
 });

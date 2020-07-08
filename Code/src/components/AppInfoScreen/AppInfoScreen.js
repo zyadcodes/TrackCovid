@@ -14,6 +14,7 @@ const AppInfoScreen = (props) => {
 				showsHorizontalScrollIndicator={false}>
 				<Text style={styles.title}>{props.title}</Text>
 				<Text style={styles.privacyPolicyText}>{props.information}</Text>
+				<View style={styles.bottomSpacer} />
 			</ScrollView>
 			<BackButton navigation={props.navigation} />
 		</View>

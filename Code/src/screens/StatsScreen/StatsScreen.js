@@ -61,12 +61,12 @@ const StatsScreen = ({ route, navigation }) => {
 				setIsRefreshing(false);
 			} catch (error) {
 				crashlytics().recordError(error);
-				navigation.navigate('ErrorScreen');
+				navigation.push('ErrorScreen');
 			}
 		} else {
 			// Sets the screen Analytics for Firebase
 			analytics().setCurrentScreen('Global Stats Screen', 'StatsScreen');
-			analytics().logEvent('Global View', {});
+			analytics().logEvent('global', {});
 			await crashlytics().setAttribute('searchedItem', 'Global');
 
 			// Uses a try-catch statement to log any possible crashes to Firebase Crashlytics. If there is an
@@ -87,7 +87,7 @@ const StatsScreen = ({ route, navigation }) => {
 				setIsRefreshing(false);
 			} catch (error) {
 				crashlytics().recordError(error);
-				navigation.navigate('ErrorScreen');
+				navigation.push('ErrorScreen');
 			}
 		}
 	};
@@ -115,7 +115,7 @@ const StatsScreen = ({ route, navigation }) => {
 							<TouchableOpacity
 								style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginTop]}
 								onPress={() => {
-									navigation.navigate('SearchScreen');
+									navigation.push('SearchScreen');
 								}}>
 								<Icon name='search' type='font-awesome' color={colors.lightPurple} />
 							</TouchableOpacity>
@@ -142,7 +142,7 @@ const StatsScreen = ({ route, navigation }) => {
 								<TouchableOpacity
 									style={StatsScreenStyle.iconRowContainer}
 									onPress={() => {
-										navigation.navigate('SearchScreen');
+										navigation.push('SearchScreen');
 									}}>
 									<Icon name='search' type='font-awesome' color={colors.lightPurple} />
 								</TouchableOpacity>
@@ -173,7 +173,7 @@ const StatsScreen = ({ route, navigation }) => {
 				ListFooterComponent={
 					<View>
 						<TouchableOpacity
-							onPress={() => navigation.navigate('SettingsScreen')}
+							onPress={() => navigation.push('SettingsScreen')}
 							style={[StatsScreenStyle.iconContainer, StatsScreenStyle.iconMarginBottom]}>
 							<Icon name='gears' type='font-awesome' color={colors.lightPurple} />
 						</TouchableOpacity>

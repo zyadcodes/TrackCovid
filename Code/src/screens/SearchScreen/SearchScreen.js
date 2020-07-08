@@ -51,7 +51,7 @@ const SearchScreen = ({ route, navigation }) => {
 	return (
 		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
 			<View style={SearchScreenStyle.screenContainer}>
-				{isIphoneX() === true ? <View style={SearchScreenStyle.iphoneXTopView} /> : <View />}
+				<View style={SearchScreenStyle.iphoneXTopView} />
 				<View style={SearchScreenStyle.searchInputContainerStyle}>
 					<TextInput
 						value={input}

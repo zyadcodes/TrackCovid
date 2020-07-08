@@ -24,5 +24,5 @@ export default {
 	TryAgain: 'Try Again',
 	Settings: 'Settings',
 	AboutUsInformation:
-		'TrackCovid was composed by two young high school developers from Washington State who sought to make an impact on the global community by creating an app that kept people informed about the latest coronavirus statistics in order for them to understand the importance of social distancing and quarantine. Our statistics are provided by the NovelCOVID API. Contact us at ContactYZApps@gmail.com.',
+		'Track Covid was developed by two young high school developers from Washington State who sought to make an impact on the global community by creating an app that kept people informed about the latest coronavirus statistics in order for them to understand the importance of social distancing and quarantine. Our statistics are provided by the NovelCOVID API. Contact us at ContactYZApps@gmail.com.',
 };
