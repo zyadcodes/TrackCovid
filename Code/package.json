@@ -11,9 +11,9 @@
   "dependencies": {
     "@react-native-community/cli-debugger-ui": "^4.7.0",
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-native-firebase/analytics": "^7.1.8",
-    "@react-native-firebase/app": "^8.0.1",
-    "@react-native-firebase/crashlytics": "^8.0.3",
+    "@react-native-firebase/analytics": "^7.2.1",
+    "@react-native-firebase/app": "^8.1.0",
+    "@react-native-firebase/crashlytics": "^8.1.1",
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2",
     "code-push": "^3.1.5",

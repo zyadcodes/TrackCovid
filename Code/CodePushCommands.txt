@@ -1,3 +1,5 @@
 To release update to CodePush:
 
 code-push release-react Track-Covid ios -t 1.0.0 -d Production 
+
+iOS Production Key: 2YuHUcDEu1ARijA2GwrUyMnbhK1RphdzDuDEn
