@@ -1,0 +1,3 @@
+To release update to CodePush:
+
+code-push release-react Track-Covid ios -t 1.0.0 -d Production 

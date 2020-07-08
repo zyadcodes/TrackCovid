@@ -1,18 +1,25 @@
-import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import BackButton from '../../../components/BackButton/BackButton'
-import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
-import strings from '../../../config/strings'
+// This screen is going to contain information about the application and its development
+import React, { useEffect } from 'react';
+import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen';
+import strings from '../../../config/strings';
+import analytics from '@react-native-firebase/analytics';
 
-const AboutUsScreen = (props) => {
-    return (
-        <AppInfoScreen
-            navigation={props.navigation}
-            title={strings.AboutUs}
-            information='TrackCovid was composed by two young high school developers, Zyad and Yousef, who sought to make an impact on the global community by creating an app that kept people informed about the latest coronavirus statistics in order for them to understand the importance of social distancing and quarantine. Our statistics are fetched from the NovelCOVID API.'
-        />
-    )
-}
+// Declares the functional component
+const AboutUsScreen = ({ route, navigation }) => {
+	// The useEffect method sets the screen in Firebase Analytics
+	useEffect(() => {
+		analytics().setCurrentScreen('About Us Screen', 'AboutUsScreen');
+	}, []);
 
-export default AboutUsScreen
+	// Returns the UI
+	return (
+		<AppInfoScreen
+			navigation={navigation}
+			title={strings.AboutUs}
+			information={strings.AboutUsInformation}
+		/>
+	);
+};
 
+// Exports the component
+export default AboutUsScreen;

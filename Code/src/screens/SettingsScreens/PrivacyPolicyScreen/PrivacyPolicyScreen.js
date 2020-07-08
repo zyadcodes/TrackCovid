@@ -1,18 +1,25 @@
-import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import BackButton from '../../../components/BackButton/BackButton'
-import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen'
-import strings from '../../../config/strings'
+// This is going to contain the Privacy Policy for the app
+import React, { useEffect } from 'react';
+import AppInfoScreen from '../../../components/AppInfoScreen/AppInfoScreen';
+import strings from '../../../config/strings';
+import analytics from '@react-native-firebase/analytics';
 
-const PrivacyPolicyScreen = (props) => {
-    return (
-        <AppInfoScreen
-            title={strings.PrivacyPolicy}
-            navigation={props.navigation}
-            information='PRIVACY NOTICE
+// Declares the functional component
+const PrivacyPolicyScreen = ({ route, navigation }) => {
+	// The useEffect method sets the screen in Firebase Analytics
+	useEffect(() => {
+		analytics().setCurrentScreen('Privacy Policy Screen', 'PrivacyPolicyScreen');
+	}, []);
+
+	// Returns the UI of the screen
+	return (
+		<AppInfoScreen
+			title={strings.PrivacyPolicy}
+			navigation={navigation}
+			information='PRIVACY NOTICE
             Last updated July 05, 2020
 
-            Thank you for choosing to be part of our community at TrackCovid (“Company”, “we”, “us”, or “our”). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at contacttrackcovid@gmail.com.
+            Thank you for choosing to be part of our community at TrackCovid (“Company”, “we”, “us”, or “our”). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at contactYZApps@gmail.com.
 
             When you use our mobile application, as the case may be (the  "App") and more generally, use any of our services (the "Services", which include the App), we appreciate that you are trusting us with your personal information. We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible what information we collect, how we use it and what rights you have in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy notice that you do not agree with, please discontinue use of our Services immediately.
 
@@ -124,16 +131,16 @@ const PrivacyPolicyScreen = (props) => {
 
             9. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
 
-            If you have questions or comments about this notice, you may email us at contacttrackcovid@gmail.com
+            If you have questions or comments about this notice, you may email us at contactYZApps@gmail.com
 
             HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
 
             Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please submit a request form by clicking here. We will respond to your request within 30 days.
             This privacy policy was created using Termly’s Privacy Policy Generator.
             '
-        />
-    )
-}
+		/>
+	);
+};
 
-export default PrivacyPolicyScreen
-
+// Exports the component
+export default PrivacyPolicyScreen;

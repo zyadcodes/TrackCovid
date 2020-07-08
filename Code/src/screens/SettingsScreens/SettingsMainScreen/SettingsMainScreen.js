@@ -1,34 +1,45 @@
-import React, { useState } from 'react'
-import {View, FlatList, Text, TouchableOpacity} from 'react-native'
-import styles from './SettingsMainScreenStyle'
-import SettingsButton from '../../../components/SettingsButton/SettingsButton'
-import {Icon} from 'react-native-elements'
-import { fontScale } from '../../../config/dimensions'
-import colors from '../../../config/colors'
-import BackButton from '../../../components/BackButton/BackButton'
-import strings from '../../../config/strings'
+// This screen is going to show all of the different settings options associated with this app
+import React, { useState, useEffect } from 'react';
+import { View, FlatList, Text } from 'react-native';
+import styles from './SettingsMainScreenStyle';
+import SettingsButton from '../../../components/SettingsButton/SettingsButton';
+import BackButton from '../../../components/BackButton/BackButton';
+import strings from '../../../config/strings';
+import analytics from '@react-native-firebase/analytics';
 
-const SettingsMainScreen = (props) => {
-    const [screens] = useState([
-        {title: strings.PrivacyPolicy, screen: 'PrivacyPolicyScreen'},
-        {title: strings.TermsOfService, screen: 'TermsOfServiceScreen'},
-        {title: strings.AboutUs, screen: 'AboutUsScreen'},
-    ])
+// Declares the functional component
+const SettingsMainScreen = ({ route, navigation }) => {
+	// The state fields of this screen
+	const [screens] = useState([
+		{ title: strings.PrivacyPolicy, screen: 'PrivacyPolicyScreen' },
+		{ title: strings.TermsOfService, screen: 'TermsOfServiceScreen' },
+		{ title: strings.AboutUs, screen: 'AboutUsScreen' },
+	]);
 
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>
-                Settings
-            </Text>
-            <FlatList
-                listKey="SettingsButtons"
-                data={screens}
-                renderItem={({item, index, separators}) => 
-                    <SettingsButton onPress={() => {props.navigation.navigate(item.screen)}} key={index} title={item.title}/>
-                }
-            />
-            <BackButton navigation={props.navigation}/>
-        </View>
-    )
-}
-export default SettingsMainScreen
+	// The useEffect method for this screen which is going to set the screen in Firebase Analytics
+	useEffect(() => {
+		analytics().setCurrentScreen('Settings Main Screen', 'SettingsMainScreen');
+	}, []);
+
+	return (
+		<View style={styles.container}>
+			<Text style={styles.title}>{strings.Settings}</Text>
+			<FlatList
+				data={screens}
+				keyExtractor={(item, index) => item.screen}
+				renderItem={({ item, index }) => (
+					<SettingsButton
+						onPress={() => {
+							navigation.push(item.screen);
+						}}
+						title={item.title}
+					/>
+				)}
+			/>
+			<BackButton navigation={navigation} />
+		</View>
+	);
+};
+
+// Exports the component
+export default SettingsMainScreen;
