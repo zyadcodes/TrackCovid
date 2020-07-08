@@ -20,8 +20,10 @@ export default styles = StyleSheet.create({
 		...fontStyles.lightPurple,
 		...fontStyles.bold,
 		marginTop: screenHeight * 0.05,
-		marginLeft: screenWidth * 0.05,
 		marginBottom: screenHeight * 0.02,
+        marginHorizontal: screenWidth * 0.05,
+		flexDirection: 'row',
+        justifyContent: 'space-between'
 	},
 	bottomSpacer: {
 		height: screenHeight * 0.025,

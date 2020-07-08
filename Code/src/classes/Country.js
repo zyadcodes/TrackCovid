@@ -51,6 +51,16 @@ export default class County {
 		}
 
 		this.countryBasicData = json;
+
+		// Accounts for lack of proper test data
+		if (this.countryBasicData.tests === 0) {
+			this.countryBasicData.tests = "Unknown";
+		}
+		if (this.countryBasicData.testsPerOneMillion === 0) {
+			this.countryBasicData.testsPerOneMillion = "Unknown";
+		}
+
+
 		return 0;
 	};
 
